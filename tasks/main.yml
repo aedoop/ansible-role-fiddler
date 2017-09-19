@@ -1,0 +1,10 @@
+---
+# tasks file for fiddler
+
+- name: Set dir_info,pkg_info fact in {{ ansible_distribution }} by {{ fiddler_install_type }} install
+  set_fact:
+    dir_info: "{{ fiddler_dirs[ansible_os_family] }}"
+    pkg_info: "{{ fiddler_packages[fiddler_version][ansible_os_family] }}"
+
+- name: Include Windows-{{ fiddler_install_type }}.yml in {{ ansible_distribution }} by {{ fiddler_install_type }} install
+  include: Window-{{ fiddler_install_type }}.yml

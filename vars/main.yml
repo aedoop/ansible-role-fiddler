@@ -1,0 +1,12 @@
+---
+# vars file for fiddler
+
+fiddler_dirs:
+  Windows:
+    tmp: C:\tmp
+
+fiddler_packages:
+  4.6.20171.26113:
+    Windows:
+      file: fiddler.install.4.6.20171.26113.nupkg
+      pull: ftp://10.0.250.100/pub/fiddler/fiddler.install.4.6.20171.26113.nupkg
